@@ -5,5 +5,13 @@
 [node name="Alpha" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 583, 346 )
+position = Vector2( 551, 319 )
+texture = ExtResource( 1 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 1491, 111 )
+texture = ExtResource( 1 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( -331, 97 )
 texture = ExtResource( 1 )
