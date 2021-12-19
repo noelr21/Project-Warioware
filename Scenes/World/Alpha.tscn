@@ -7,3 +7,7 @@
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 583, 346 )
 texture = ExtResource( 1 )
+
+[node name="BigChungus" type="Sprite" parent="."]
+position = Vector2( 961, 343 )
+texture = ExtResource( 1 )
