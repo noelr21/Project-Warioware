@@ -1,23 +1,22 @@
-extends Sprite
+extends Node2D
 
+#Variables for the door objects
 onready var leftDoor = $LeftDoor
 onready var rightDoor = $RightDoor
-const Chungus = preload("res://Sprites/Chungus.tscn")
+#Variables for the linked doors
+#Note: This will be hardcoded for now but eventually will be assigned by the 
+export(NodePath) var leftDoorDestination;
+export(NodePath) var rightDoorDestination;
+onready var ldDes = get_node(leftDoorDestination)
+onready var rdDes = get_node(rightDoorDestination)
 
-func _physics_process(_delta):
-	if Input.is_action_just_pressed("ui_left"):
-		spawn_chungus(leftDoor)
-	elif Input.is_action_just_pressed("ui_right"):
-		spawn_chungus(rightDoor)
+#Move player to room on the left
+func _on_RightDoor_body_entered(body):
+	print("RightDoorEntered")
+	body.move_between_rooms(rdDes)
 
-func _on_RightDoor_area_entered(area:Area2D):
-	spawn_chungus(area)
+#Move player to room on the right
+func _on_LeftDoor_body_entered(body):
+	print("LeftDoorEntered")
+	body.move_between_rooms(ldDes)
 
-func _on_LeftDoor_area_entered(area:Area2D):
-	spawn_chungus(area)
-
-func spawn_chungus(area):
-	var chungus = Chungus.instance()
-	get_parent().add_child(chungus)
-	print(area.global_position)
-	chungus.global_position = area.global_position
