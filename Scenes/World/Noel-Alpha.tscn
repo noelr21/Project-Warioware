@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Rooms/SampleRoom.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+
+[node name="Level" type="Node2D"]
+
+[node name="Room" parent="." instance=ExtResource( 1 )]
+position = Vector2( 324, 186 )
+leftDoorDestination = NodePath("../Room4/RightDoor")
+rightDoorDestination = NodePath("../Room2/LeftDoor")
+
+[node name="LeftDoor" parent="Room" index="1"]
+collision_mask = 0
+
+[node name="RightDoor" parent="Room" index="2"]
+collision_mask = 0
+
+[node name="Room2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1010, 191 )
+leftDoorDestination = NodePath("../Room/RightDoor")
+rightDoorDestination = NodePath("../Room3/LeftDoor")
+
+[node name="Room3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 325, 564 )
+leftDoorDestination = NodePath("../Room2/RightDoor")
+rightDoorDestination = NodePath("../Room4/LeftDoor")
+
+[node name="Room4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1011, 557 )
+leftDoorDestination = NodePath("../Room3/RightDoor")
+rightDoorDestination = NodePath("../Room/LeftDoor")
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 324, 188 )
+ACCELERATION = 550
+MAX_SPEED = 140
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+
+[editable path="Room"]
+[editable path="Room2"]
+[editable path="Room3"]
+[editable path="Room4"]
