@@ -38,6 +38,7 @@ MAX_SPEED = 140
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
+zoom = Vector2( 1.5, 1.5 )
 
 [editable path="Room"]
 [editable path="Room2"]
