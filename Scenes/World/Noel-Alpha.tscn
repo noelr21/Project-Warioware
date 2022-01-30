@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Rooms/SampleRoom.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/UI/HealthUI.tscn" type="PackedScene" id=3]
 
 [node name="Level" type="Node2D"]
 
@@ -33,12 +34,22 @@ rightDoorDestination = NodePath("../Room/LeftDoor")
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 324, 188 )
-ACCELERATION = 550
+ACCELERATION = 1000
 MAX_SPEED = 140
+FRICTION = 1000
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
 zoom = Vector2( 1.5, 1.5 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HealthUI" parent="CanvasLayer" instance=ExtResource( 3 )]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 4.0
+margin_bottom = 4.0
+debug = true
 
 [editable path="Room"]
 [editable path="Room2"]
