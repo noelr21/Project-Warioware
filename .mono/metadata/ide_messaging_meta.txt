@@ -1,2 +1,2 @@
-﻿64767
-C:/Users/manyc/AppData/Local/Temp/Rar$EXa2628.37918/Godot_v3.4.2-stable_mono_win64/Godot_v3.4.2-stable_mono_win64.exe
+﻿57570
+F:/Documents/Godot/Godot_v3.4-stable_mono_win64/Godot_v3.4-stable_mono_win64.exe
