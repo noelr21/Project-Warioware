@@ -1,9 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/Rooms/room.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/DirtTileset.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/pp.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Big_chungus.png" type="Texture" id=4]
 
 [sub_resource type="TileSet" id=4]
 0/name = "DirtTileset.png 0"
@@ -64,16 +62,12 @@ position = Vector2( 13, 0 )
 scale = Vector2( 0.999999, 1 )
 shape = SubResource( 3 )
 
-[node name="BigChungus" type="Sprite" parent="."]
-position = Vector2( 20.9999, 9 )
-scale = Vector2( 0.181208, 0.151007 )
-texture = ExtResource( 4 )
+[node name="InvisibleWalls" type="StaticBody2D" parent="."]
+collision_mask = 0
 
-[node name="Pp" type="Sprite" parent="."]
-position = Vector2( 38, 44 )
-rotation = 1.53065
-scale = Vector2( 0.144531, 0.131511 )
-texture = ExtResource( 3 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InvisibleWalls"]
+visible = false
+polygon = PoolVector2Array( 272, 16, 288, 16, 288, -16, 272, -16, 272, -176, -288, -176, -288, -16, -304, -16, -304, 16, -288, 16, -288, 160, 272, 160, 272, 184, -320, 184, -312, -192, 312, -192, 304, 184, 272, 184 )
 
 [connection signal="body_entered" from="LeftDoor" to="." method="_on_LeftDoor_body_entered"]
 [connection signal="body_entered" from="RightDoor" to="." method="_on_RightDoor_body_entered"]
