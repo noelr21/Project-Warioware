@@ -33,7 +33,7 @@ func _ready():
 	self.health = health
 	self.max_health = max_health
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if !debug:
 		return
 	if Input.is_action_just_pressed("debug_up"):
