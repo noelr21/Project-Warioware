@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scripts/Rooms/room.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Rooms/room.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/DirtTileset.png" type="Texture" id=2]
 
 [sub_resource type="TileSet" id=4]
@@ -67,7 +67,7 @@ collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InvisibleWalls"]
 visible = false
-polygon = PoolVector2Array( 272, 16, 288, 16, 288, -16, 272, -16, 272, -176, -288, -176, -288, -16, -304, -16, -304, 16, -288, 16, -288, 160, 272, 160, 272, 184, -320, 184, -312, -192, 312, -192, 304, 184, 272, 184 )
+polygon = PoolVector2Array( 272, 16, 288, 16, 288, -16, 272, -16, 272, -176, -288, -176, -288, -16, -304, -16, -304, 16, -288, 16, -288, 160, 272, 160, 272, 184, -320, 184, -320, -192, 304, -192, 304, 184, 272, 184 )
 
 [connection signal="body_entered" from="LeftDoor" to="." method="_on_LeftDoor_body_entered"]
 [connection signal="body_entered" from="RightDoor" to="." method="_on_RightDoor_body_entered"]
