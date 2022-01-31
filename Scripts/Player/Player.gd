@@ -7,6 +7,8 @@ export var FRICTION = 500
 var velocity = Vector2.ZERO
 var roll_vector = Vector2.DOWN
 
+onready var animationPlayer = $AnimationPlayer
+
 # Get minimap
 onready var minimap = get_tree().get_root().get_child(0).get_node("UI/Minimap")
 
