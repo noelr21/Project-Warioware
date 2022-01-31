@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/sprite-sheets/minimap-Sheet.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/UI/Minimap/Minimap.gd" type="Script" id=2]
+
+[node name="Minimap" type="Control"]
+rect_scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Minimap" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+hframes = 5
+frame = 1

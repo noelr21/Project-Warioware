@@ -1,14 +1,19 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Rooms/SampleRoom.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/UI/HealthUI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/UI/Minimap.tscn" type="PackedScene" id=4]
 
 [node name="Level" type="Node2D"]
+position = Vector2( -1, 0 )
 
 [node name="Room" parent="." instance=ExtResource( 1 )]
 position = Vector2( 324, 186 )
 leftDoorDestination = NodePath("../Room4/RightDoor")
 rightDoorDestination = NodePath("../Room2/LeftDoor")
+leftDoorIndex = 4
+rightDoorIndex = 2
 
 [node name="LeftDoor" parent="Room" index="1"]
 collision_mask = 0
@@ -20,24 +25,47 @@ collision_mask = 0
 position = Vector2( 1010, 191 )
 leftDoorDestination = NodePath("../Room/RightDoor")
 rightDoorDestination = NodePath("../Room3/LeftDoor")
+leftDoorIndex = 1
+rightDoorIndex = 3
 
 [node name="Room3" parent="." instance=ExtResource( 1 )]
 position = Vector2( 325, 564 )
 leftDoorDestination = NodePath("../Room2/RightDoor")
 rightDoorDestination = NodePath("../Room4/LeftDoor")
+leftDoorIndex = 2
+rightDoorIndex = 4
 
 [node name="Room4" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1011, 557 )
 leftDoorDestination = NodePath("../Room3/RightDoor")
 rightDoorDestination = NodePath("../Room/LeftDoor")
+leftDoorIndex = 3
+rightDoorIndex = 1
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 324, 188 )
-ACCELERATION = 550
-MAX_SPEED = 140
+ACCELERATION = 1000
+MAX_SPEED = 360
+FRICTION = 1000
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
+zoom = Vector2( 1.5, 1.5 )
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HealthUI" parent="UI" instance=ExtResource( 3 )]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 4.0
+margin_bottom = 4.0
+debug = true
+
+[node name="Minimap" parent="UI" instance=ExtResource( 4 )]
+anchor_left = 0.888
+anchor_right = 0.888
+margin_left = -0.160034
+margin_right = -0.160004
 
 [editable path="Room"]
 [editable path="Room2"]

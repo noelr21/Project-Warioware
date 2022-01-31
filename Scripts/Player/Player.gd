@@ -7,15 +7,11 @@ export var FRICTION = 500
 var velocity = Vector2.ZERO
 var roll_vector = Vector2.DOWN
 
-<<<<<<< Updated upstream
-=======
 onready var animationPlayer = $AnimationPlayer
-
 
 # Get minimap
 onready var minimap = get_tree().get_root().get_child(0).get_node("UI/Minimap")
 
->>>>>>> Stashed changes
 #Control whether the player can move between rooms or not
 var canChangeRooms = true setget set_canChangeRooms, get_canChangeRooms
 
@@ -40,6 +36,8 @@ func _physics_process(delta):
 func move():
 	velocity = move_and_slide(velocity) #move_and_slide returns the velocity left over from the collision and set it to the velocity
 
-func move_between_rooms(destination):
+# Moves the player between rooms
+func move_between_rooms(destination, roomIndex):
 	if(canChangeRooms):
 		global_position = destination.global_position
+		minimap.changeRooms(roomIndex) #Change current room on minimap
