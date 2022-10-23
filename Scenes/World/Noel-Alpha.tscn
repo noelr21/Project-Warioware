@@ -52,4 +52,10 @@ margin_left = -0.160034
 margin_right = -0.160004
 
 [node name="Forest-Spirit" parent="." instance=ExtResource( 5 )]
-position = Vector2( 808, 89 )
+position = Vector2( 809, 89 )
+
+[node name="Forest-Spirit2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1202, 84 )
+
+[node name="Forest-Spirit3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1011, 252 )

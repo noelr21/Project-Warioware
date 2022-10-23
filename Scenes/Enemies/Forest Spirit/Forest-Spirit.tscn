@@ -1,28 +1,260 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Sprites/sprite-sheets/forest-spirit-idle-and-attack-Sheet.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Hitboxes and Hurtboxes/Hitbox.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Stats/Stats.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Hitboxes and Hurtboxes/Hurtbox.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Sprites/shadows/MediumShadow.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Enemies/Forest Spirit/Forest-Spirit.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/Hitboxes and Hurtboxes/PlayerDetectionZone/PlayerDetectionZone.tscn" type="PackedScene" id=7]
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 200.0
 
 [sub_resource type="CircleShape2D" id=4]
 radius = 6.0
 
-[sub_resource type="CapsuleShape2D" id=2]
-radius = 4.0
-height = 4.0
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 14.5, 5.5 )
 
 [sub_resource type="CapsuleShape2D" id=3]
 radius = 4.0
 height = 10.0
 
+[sub_resource type="AnimationNodeAnimation" id=15]
+animation = "Left_Attack"
+
+[sub_resource type="AnimationNodeAnimation" id=16]
+animation = "Right_Attack"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=17]
+blend_point_0/node = SubResource( 15 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 16 )
+blend_point_1/pos = Vector2( 1, 0 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=18]
+animation = "Left_Idle"
+
+[sub_resource type="AnimationNodeAnimation" id=19]
+animation = "Right_Idle"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=20]
+blend_point_0/node = SubResource( 18 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 19 )
+blend_point_1/pos = Vector2( 1, 0 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=21]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=22]
+
+[sub_resource type="AnimationNodeStateMachine" id=12]
+states/Attack/node = SubResource( 17 )
+states/Attack/position = Vector2( 524, 149 )
+states/Idle/node = SubResource( 20 )
+states/Idle/position = Vector2( 524, 56 )
+transitions = [ "Idle", "Attack", SubResource( 21 ), "Attack", "Idle", SubResource( 22 ) ]
+graph_offset = Vector2( -47, -22 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=13]
+
+[sub_resource type="Animation" id=6]
+resource_name = "Left_Attack"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 6, 7, 8, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AttackHitbox/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AttackHitbox:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -11, 3 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AttackHitbox:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 90.0 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "Left_Idle"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 5 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AttackHitbox/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 5 ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "Right_Attack"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AttackHitbox/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AttackHitbox:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 12, 3 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AttackHitbox:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 90.0 ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "Right_Idle"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AttackHitbox/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
 [node name="Forest-Spirit" type="KinematicBody2D"]
 collision_layer = 8
+collision_mask = 9
+script = ExtResource( 6 )
+
+[node name="PlayerDetectionZone" parent="." instance=ExtResource( 7 )]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
+modulate = Color( 1, 1, 1, 0.117647 )
+shape = SubResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 hframes = 10
+frame = 5
 
 [node name="ShadowSprite" type="Sprite" parent="."]
 position = Vector2( -1, 22 )
@@ -32,14 +264,14 @@ texture = ExtResource( 5 )
 position = Vector2( -1, 22 )
 shape = SubResource( 4 )
 
-[node name="HitboxPivot" type="Position2D" parent="."]
-
-[node name="AttackHitbox" parent="HitboxPivot" instance=ExtResource( 2 )]
-position = Vector2( 9, -5 )
+[node name="AttackHitbox" parent="." instance=ExtResource( 2 )]
+position = Vector2( 12, 3 )
+rotation = 1.5708
 parentDirectories = 2
 
-[node name="CollisionShape2D" parent="HitboxPivot/AttackHitbox" index="0"]
-shape = SubResource( 2 )
+[node name="CollisionShape2D" parent="AttackHitbox" index="0"]
+shape = SubResource( 14 )
+disabled = true
 
 [node name="Stats" parent="." instance=ExtResource( 3 )]
 
@@ -51,7 +283,24 @@ collision_mask = 0
 position = Vector2( 0, 7 )
 shape = SubResource( 3 )
 
-[connection signal="area_entered" from="HitboxPivot/AttackHitbox" to="HitboxPivot/AttackHitbox" method="_on_Hitbox_area_entered"]
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 12 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 13 )
+parameters/Attack/blend_position = Vector2( 0.496975, 0.206186 )
+parameters/Idle/blend_position = Vector2( -0.87554, 0.309278 )
 
-[editable path="HitboxPivot/AttackHitbox"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Left_Idle"
+anims/Left_Attack = SubResource( 6 )
+anims/Left_Idle = SubResource( 7 )
+anims/RESET = SubResource( 8 )
+anims/Right_Attack = SubResource( 9 )
+anims/Right_Idle = SubResource( 10 )
+
+[connection signal="area_entered" from="AttackHitbox" to="AttackHitbox" method="_on_Hitbox_area_entered"]
+
+[editable path="PlayerDetectionZone"]
+[editable path="AttackHitbox"]
 [editable path="Hurtbox"]

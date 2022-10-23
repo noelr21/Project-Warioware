@@ -8,6 +8,7 @@ export(Array, Array, NodePath) var doorNodePaths
 # Arrays of rooms and the destinations of their doors related by index
 var rooms = []
 var doorPaths = []
+var currentRoom
 
 func _ready():
 	init_rooms()
@@ -46,3 +47,4 @@ func get_string_from_nodepath(nodepath):
 	for i in nodepath.get_name_count():
 		string += nodepath.get_name(i)+("/" if i != nodepath.get_name_count()-1 else "")
 	return string
+
