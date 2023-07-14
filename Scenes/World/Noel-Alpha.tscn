@@ -1,55 +1,56 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=7 format=3 uid="uid://dqv0yp1e2lg1k"]
 
-[ext_resource path="res://Scenes/Rooms/SampleRoom.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/UI/HealthUI/HealthUI.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/UI/Minimap/Minimap.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Enemies/Forest Spirit/Forest-Spirit.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/LevelMaster/LevelMaster.tscn" type="PackedScene" id=6]
+[ext_resource type="PackedScene" uid="uid://bolt8pqo3mb0p" path="res://Scenes/Rooms/SampleRoom.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://bdi0y0ak7nxf" path="res://Scenes/Player/Player.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://Scenes/UI/HealthUI/HealthUI.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Scenes/UI/Minimap/Minimap.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://dnal6g33vc4ig" path="res://Scenes/Enemies/Forest Spirit/Forest-Spirit.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://bkv7sl84ari26" path="res://Scenes/LevelMaster/LevelMaster.tscn" id="6"]
 
 [node name="Level" type="Node2D"]
-position = Vector2( -1, 0 )
+position = Vector2(-1, 0)
 
-[node name="LevelMaster" parent="." instance=ExtResource( 6 )]
-roomNodePaths = [ NodePath("../Room"), NodePath("../Room2"), NodePath("../Room3"), NodePath("../Room4") ]
-doorNodePaths = [ [ NodePath("../Room4"), NodePath("../Room2") ], [ NodePath("../Room"), NodePath("../Room3") ], [ NodePath("../Room2"), NodePath("../Room4") ], [ NodePath("../Room3"), NodePath("../Room") ] ]
+[node name="LevelMaster" parent="." instance=ExtResource("6")]
+script = null
 
-[node name="Room" parent="." instance=ExtResource( 1 )]
-position = Vector2( 324, 186 )
+[node name="Room" parent="." instance=ExtResource("1")]
+position = Vector2(324, 186)
 
-[node name="Room2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1010, 191 )
+[node name="Room2" parent="." instance=ExtResource("1")]
+position = Vector2(1010, 191)
 
-[node name="Room3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 325, 564 )
+[node name="Room3" parent="." instance=ExtResource("1")]
+position = Vector2(325, 564)
 
-[node name="Room4" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1011, 557 )
+[node name="Room4" parent="." instance=ExtResource("1")]
+position = Vector2(1011, 557)
 
-[node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 324, 188 )
+[node name="Player" parent="." instance=ExtResource("2")]
+position = Vector2(324, 188)
 ACCELERATION = 1000
 MAX_SPEED = 360
 FRICTION = 1000
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-current = true
-zoom = Vector2( 1.5, 1.5 )
+zoom = Vector2(1.5, 1.5)
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="HealthUI" parent="UI" instance=ExtResource( 3 )]
-margin_left = 4.0
-margin_top = 4.0
-margin_right = 4.0
-margin_bottom = 4.0
+[node name="HealthUI" parent="UI" instance=ExtResource("3")]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 4.0
+offset_bottom = 4.0
 debug = true
 
-[node name="Minimap" parent="UI" instance=ExtResource( 4 )]
+[node name="Minimap" parent="UI" instance=ExtResource("4")]
+layout_mode = 3
 anchor_left = 0.888
 anchor_right = 0.888
-margin_left = -0.160034
-margin_right = -0.160004
+offset_left = -0.160034
+offset_right = -0.160004
 
-[node name="Forest-Spirit" parent="." instance=ExtResource( 5 )]
-position = Vector2( 808, 89 )
+[node name="Forest-Spirit" parent="." instance=ExtResource("5")]
+position = Vector2(445, 101)

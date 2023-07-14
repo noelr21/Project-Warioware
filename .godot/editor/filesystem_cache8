@@ -1,0 +1,60 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1689352620
+default_env.tres::Environment::7940488979328022629::1689352620::0::1::::<><>::
+icon.png::CompressedTexture2D::6664044830007276708::1689343090::1689351543::1::::<><>::
+README.md::TextFile::-1::1689343090::0::1::::<><>::
+Stats.gd::GDScript::-1::1689351257::0::1::::<>Node<>::
+::res://Scenes/::1689343090
+::res://Scenes/Enemies/::1689343090
+::res://Scenes/Enemies/Forest Spirit/::1689343090
+Forest-Spirit.gd::GDScript::-1::1689351257::0::1::::<>CharacterBody2D<>::
+Forest-Spirit.tscn::PackedScene::-1::1689351257::0::1::::<><>::res://Sprites/sprite-sheets/forest-spirit-idle-and-attack-Sheet.png<>res://Scenes/Hitboxes and Hurtboxes/Hitbox.tscn<>res://Scenes/Stats/Stats.tscn<>res://Scenes/Hitboxes and Hurtboxes/Hurtbox.tscn<>res://Sprites/shadows/MediumShadow.png
+::res://Scenes/Hitboxes and Hurtboxes/::1689343090
+Hitbox.gd::GDScript::-1::1689351257::0::1::::<>Area2D<>::
+Hitbox.tscn::PackedScene::-1::1689351257::0::1::::<><>::res://Scenes/Hitboxes and Hurtboxes/Hitbox.gd
+Hurtbox.tscn::PackedScene::-1::1689351257::0::1::::<><>::
+::res://Scenes/Hitboxes and Hurtboxes/PlayerDetectionZone/::1689343090
+PlayerDetectionZone.gd::GDScript::-1::1689351257::0::1::::<>Area2D<>::
+PlayerDetectionZone.tscn::PackedScene::-1::1689351257::0::1::::<><>::res://Scenes/Hitboxes and Hurtboxes/PlayerDetectionZone/PlayerDetectionZone.gd
+::res://Scenes/LevelMaster/::1689343090
+LevelMaster.gd::GDScript::-1::1689351257::0::1::::<>Node2D<>::
+LevelMaster.tscn::PackedScene::-1::1689351257::0::1::::<><>::res://Scenes/LevelMaster/LevelMaster.gd
+::res://Scenes/Player/::1689351543
+Player.gd::GDScript::-1::1689351257::0::1::::<>CharacterBody2D<>::
+Player.png::CompressedTexture2D::5404741312143973190::1689343090::1689352789::1::::<><>::
+Player.tscn::PackedScene::-1::1689351257::0::1::::<><>::res://Scenes/Player/Player.gd<>res://Scenes/Player/Player.png
+::res://Scenes/Rooms/::1689352620
+room.gd::GDScript::-1::1689351257::0::1::::<>Node2D<>::
+SampleRoom.tscn::PackedScene::3392986017222746181::1689352620::0::1::::<><>::res://Scenes/Rooms/room.gd<>uid://bh2ptw74qtwo::::res://Sprites/DirtTileset.png
+::res://Scenes/Stats/::1689343090
+Stats.gd::GDScript::-1::1689351257::0::1::::<>Node<>::
+Stats.tscn::PackedScene::-1::1689351257::0::1::::<><>::res://Scenes/Stats/Stats.gd
+::res://Scenes/UI/::1689343090
+::res://Scenes/UI/HealthUI/::1689343090
+HealthUI.gd::GDScript::-1::1689351257::0::1::::<>Control<>::
+HealthUI.tscn::PackedScene::-1::1689351257::0::1::::<><>::res://Scenes/UI/HealthUI/HealthUI.gd<>res://Sprites/sprite-sheets/HealthBarStart.png<>res://Sprites/sprite-sheets/HealthBarEnd.png<>res://Sprites/sprite-sheets/HealthNodeEmpty.png<>res://Sprites/sprite-sheets/HealthNodeFull.png
+::res://Scenes/UI/Minimap/::1689343090
+Minimap.gd::GDScript::-1::1689351257::0::1::::<>Control<>::
+Minimap.tscn::PackedScene::-1::1689351257::0::1::::<><>::res://Sprites/sprite-sheets/minimap-Sheet.png<>res://Scenes/UI/Minimap/Minimap.gd
+::res://Scenes/World/::1689343090
+Noel-Alpha.tscn::PackedScene::-1::1689351257::0::1::::<><>::res://Scenes/Rooms/SampleRoom.tscn<>res://Scenes/Player/Player.tscn<>res://Scenes/UI/HealthUI/HealthUI.tscn<>res://Scenes/UI/Minimap/Minimap.tscn<>res://Scenes/Enemies/Forest Spirit/Forest-Spirit.tscn<>res://Scenes/LevelMaster/LevelMaster.tscn
+::res://Scenes/World/Eduard Scenes/::1689343090
+Eduard Scene.tscn::PackedScene::-1::1689351257::0::1::::<><>::res://Scenes/Rooms/SampleRoom.tscn<>res://Player/Player.tscn<>res://Scenes/UI/HealthUI.tscn<>res://Scenes/UI/Minimap.tscn
+::res://Scripts/::1689343090
+Testing.gd::GDScript::-1::1689351257::0::1::::<>CharacterBody2D<>::
+::res://Sprites/::1689352517
+Big_chungus.png::CompressedTexture2D::1243625029315123262::1689343090::1689351544::1::::<><>::
+Chungus.tscn::PackedScene::-1::1689351257::0::1::::<><>::res://Sprites/Big_chungus.png
+DirtTileset.png::CompressedTexture2D::86306667052407574::1689343090::1689352517::1::::<><>::
+pp.png::CompressedTexture2D::1747352824237389958::1689343090::1689351543::1::::<><>::
+::res://Sprites/shadows/::1689351543
+MediumShadow.png::CompressedTexture2D::5454258473631887234::1689343090::1689352685::1::::<><>::
+::res://Sprites/sprite-sheets/::1689351543
+character-idle-hit-run-Sheet.png::CompressedTexture2D::616299257636417397::1689343090::1689352701::1::::<><>::
+forest-spirit-idle-and-attack-Sheet.png::CompressedTexture2D::4006944809593024241::1689343090::1689352701::1::::<><>::
+HealthBarEnd.png::CompressedTexture2D::4825045157497834843::1689343090::1689352701::1::::<><>::
+HealthBarStart.png::CompressedTexture2D::4431881238513375970::1689343090::1689352701::1::::<><>::
+HealthNodeEmpty.png::CompressedTexture2D::3600470592758100665::1689343090::1689352701::1::::<><>::
+HealthNodeFull.png::CompressedTexture2D::8621279640113806653::1689343090::1689352701::1::::<><>::
+minimap-Sheet.png::CompressedTexture2D::5210794747739747293::1689343090::1689352701::1::::<><>::
+Sword-idle-swing-Sheet.png::CompressedTexture2D::2175689769529221195::1689343090::1689352701::1::::<><>::

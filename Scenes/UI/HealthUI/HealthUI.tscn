@@ -1,24 +1,24 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/UI/HealthUI/HealthUI.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/sprite-sheets/HealthBarStart.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/sprite-sheets/HealthBarEnd.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/sprite-sheets/HealthNodeEmpty.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/sprite-sheets/HealthNodeFull.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/sprite-sheets/HealthBarStart.png" type="Texture2D" id=2]
+[ext_resource path="res://Sprites/sprite-sheets/HealthBarEnd.png" type="Texture2D" id=3]
+[ext_resource path="res://Sprites/sprite-sheets/HealthNodeEmpty.png" type="Texture2D" id=4]
+[ext_resource path="res://Sprites/sprite-sheets/HealthNodeFull.png" type="Texture2D" id=5]
 
 [node name="HealthBarUI" type="Control"]
-margin_right = 21.0
-margin_bottom = 11.0
-rect_scale = Vector2( 2, 2 )
+offset_right = 21.0
+offset_bottom = 11.0
+scale = Vector2( 2, 2 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HealthNodeEmpty" type="TextureRect" parent="."]
-margin_left = 14.0
-margin_right = 20.0
-margin_bottom = 11.0
+offset_left = 14.0
+offset_right = 20.0
+offset_bottom = 11.0
 texture = ExtResource( 4 )
 expand = true
 stretch_mode = 2
@@ -27,9 +27,9 @@ __meta__ = {
 }
 
 [node name="HealthNodeFull" type="TextureRect" parent="."]
-margin_left = 14.0
-margin_right = 20.0
-margin_bottom = 11.0
+offset_left = 14.0
+offset_right = 20.0
+offset_bottom = 11.0
 texture = ExtResource( 5 )
 expand = true
 stretch_mode = 2
@@ -38,18 +38,18 @@ __meta__ = {
 }
 
 [node name="HealthBarStart" type="TextureRect" parent="."]
-margin_right = 14.0
-margin_bottom = 11.0
+offset_right = 14.0
+offset_bottom = 11.0
 texture = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HealthBarEnd" type="TextureRect" parent="."]
-margin_left = 20.0
-margin_top = 1.0
-margin_right = 21.0
-margin_bottom = 10.0
+offset_left = 20.0
+offset_top = 1.0
+offset_right = 21.0
+offset_bottom = 10.0
 texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false

@@ -1,8 +1,8 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
-export var ACCELERATION = 300
-export var MAX_SPEED = 50
-export var FRICTION = 200
+@export var ACCELERATION = 300
+@export var MAX_SPEED = 50
+@export var FRICTION = 200
 
 enum{
 	IDLE, 
@@ -10,15 +10,16 @@ enum{
 	CHASE
 }
 
-
-var velocity = Vector2.ZERO
 var knockback = Vector2.ZERO
 
 var state = IDLE
 
-onready var sprite = $Sprite
-onready var stats = $Stats
-onready var playerDetectionZone = $PlayerDetectionZone
+@onready var sprite = $Sprite2D
+@onready var stats = $Stats
+@onready var playerDetectionZone = $PlayerDetectionZone
+
+func _ready():
+	velocity = Vector2.ZERO
 
 func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, FRICTION * delta)
@@ -36,7 +37,9 @@ func _physics_process(delta):
 			else:
 				state = IDLE
 	sprite.flip_h = velocity.x < 0 
-	velocity = move_and_slide(velocity)
+	set_velocity(velocity)
+	move_and_slide()
+	velocity = velocity
 
 func seek_player():
 	if playerDetectionZone.can_see_player():
@@ -49,6 +52,6 @@ func _on_Hurtbox_area_entered(area:Area2D):
 # This is the signal receiving information from 
 func _on_Stats_no_health():
 	queue_free()
-	var enemyDeathEffect = EnemyDeathEffect.instance()
-	get_parent().add_child(enemyDeathEffect)
-	enemyDeathEffect.global_position = global_position
+#	var enemyDeathEffect = EnemyDeathEffect.instantiate()
+#	get_parent().add_child(enemyDeathEffect)
+#	enemyDeathEffect.global_position = global_position

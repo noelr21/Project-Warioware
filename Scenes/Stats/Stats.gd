@@ -1,8 +1,8 @@
 extends Node
 
-export(int) var max_health = 1 
-export(int) var damage = 1
-onready var health = max_health setget set_health
+@export var max_health: int = 1 
+@export var damage: int = 1
+@onready var health = max_health: set = set_health
 
 signal no_health
 

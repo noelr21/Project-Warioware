@@ -1,11 +1,11 @@
 extends Node2D
 
 # Variables for Map indexes as int
-var leftDoorIndex setget set_leftDoorIndex
-var rightDoorIndex setget set_rightDoorIndex
+var leftDoorIndex : set = set_leftDoorIndex
+var rightDoorIndex : set = set_rightDoorIndex
 # Nodes for the left door and right door destinations
-var ldDes setget set_ldDes
-var rdDes setget set_rdDes
+var ldDes : set = set_ldDes
+var rdDes : set = set_rdDes
 # Setter methods
 func set_ldDes(value):
 	ldDes = value

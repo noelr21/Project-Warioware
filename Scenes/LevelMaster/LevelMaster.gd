@@ -1,10 +1,10 @@
 extends Node2D
 
 # Holds an array of all nodePaths for all rooms
-export(Array, NodePath) var roomNodePaths
+@export_node_path var roomNodePaths # (Array, NodePath)
 # Holds an array of room nodePaths that define what rooms each door goes to
 # [room 1: [leftDoorDes(i.e. other room right door), rightDoorDes(i.e. other room left door)] room 2: [leftDoorDes, rightDoorDes]]
-export(Array, Array, NodePath) var doorNodePaths
+@export_node_path var doorNodePaths # (Array, Array, NodePath)
 # Arrays of rooms and the destinations of their doors related by index
 var rooms = []
 var doorPaths = []

@@ -1,8 +1,8 @@
 extends Area2D
 
 # Variables to specifiy how to move in the node structure to find a specific node which goes by nodeName
-export(int) var parentDirectories = 1;
-export(String) var nodeName = "Stats";
+@export var parentDirectories: int = 1;
+@export var nodeName: String = "Stats";
 
 var damage;
 
