@@ -1,12 +1,8 @@
 res://default_env.tres
+res://Scenes/Hitboxes and Hurtboxes/PlayerDetectionZone/PlayerDetectionZone.tscn
+res://Scenes/Hitboxes and Hurtboxes/PlayerDetectionZone/PlayerDetectionZone.gd
+res://Scenes/World/Noel-Alpha.tscn
 res://Scenes/Rooms/SampleRoom.tscn
 res://Scenes/Player/Player.tscn
-res://Scenes/World/Noel-Alpha.tscn
-res://Scenes/LevelMaster/LevelMaster.gd
-res://Scenes/Enemies/Forest Spirit/Forest-Spirit.tscn
 res://Scenes/LevelMaster/LevelMaster.tscn
-res://Scenes/Player/Player.gd
-res://Scenes/Enemies/Forest Spirit/Forest-Spirit.gd
-res://Scenes/Stats/Stats.gd
-res://Scenes/Hitboxes and Hurtboxes/PlayerDetectionZone/PlayerDetectionZone.gd
-res://Scenes/Hitboxes and Hurtboxes/PlayerDetectionZone/PlayerDetectionZone.tscn
+res://Scenes/Enemies/Forest Spirit/Forest-Spirit.tscn
