@@ -53,4 +53,5 @@ offset_left = -0.160034
 offset_right = -0.160004
 
 [node name="Forest-Spirit" parent="." instance=ExtResource("5")]
-position = Vector2(445, 101)
+position = Vector2(470, 85)
+HOVERDISTANCE = 60

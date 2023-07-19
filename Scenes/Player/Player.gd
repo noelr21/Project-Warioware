@@ -36,6 +36,7 @@ func _physics_process(delta):
 func move():
 	set_velocity(vel)
 	move_and_slide()
+	queue_redraw()
 	vel = vel #move_and_slide returns the velocity left over from the collision and set it to the velocity
 
 # Moves the player between rooms
@@ -43,3 +44,6 @@ func move_between_rooms(destination, roomIndex):
 	if(canChangeRooms):
 		global_position = destination.global_position
 		minimap.changeRooms(roomIndex) #Change current room on minimap
+		
+func _draw():
+	draw_circle(Vector2.ZERO, 60, Color(Color.PINK, 0.50))

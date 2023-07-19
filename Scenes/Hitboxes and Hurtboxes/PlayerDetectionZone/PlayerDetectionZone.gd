@@ -15,7 +15,7 @@ func _on_PlayerDetectionZone_body_exited(_body:Node):
 	player = null
 	lineOfSight = false
 	playerFound = false
-
+	
 #if player enters the detection zone check to see if they are in line of sight and if found do not forget them as
 #as long as they are in the detection zone
 func _physics_process(_delta):

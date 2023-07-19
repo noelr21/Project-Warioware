@@ -1,31 +1,31 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1689389705
-default_env.tres::Environment::7940488979328022629::1689389696::0::1::::<><>::
+::res://::1689627375
+default_env.tres::Environment::7940488979328022629::1689395985::0::1::::<><>::
 icon.png::CompressedTexture2D::6664044830007276708::1689343090::1689351543::1::::<><>::
 README.md::TextFile::-1::1689343090::0::1::::<><>::
 Stats.gd::GDScript::-1::1689351257::0::1::::<>Node<>::
 ::res://Scenes/::1689343090
 ::res://Scenes/Enemies/::1689343090
-::res://Scenes/Enemies/Forest Spirit/::1689389696
+::res://Scenes/Enemies/Forest Spirit/::1689395775
 Forest-Spirit.gd::GDScript::-1::1689385701::0::1::::<>CharacterBody2D<>::
-Forest-Spirit.tscn::PackedScene::8072440624600198890::1689389696::0::1::::<><>::uid://bxc82bx7jnixl::::res://Sprites/sprite-sheets/forest-spirit-idle-and-attack-Sheet.png<>res://Scenes/Enemies/Forest Spirit/Forest-Spirit.gd<>res://Scenes/Hitboxes and Hurtboxes/Hitbox.tscn<>res://Scenes/Stats/Stats.tscn<>res://Scenes/Hitboxes and Hurtboxes/Hurtbox.tscn<>uid://cjyc3tittit8e::::res://Sprites/shadows/MediumShadow.png<>uid://8w0ds8e7qk8i::::res://Scenes/Hitboxes and Hurtboxes/PlayerDetectionZone/PlayerDetectionZone.tscn
+Forest-Spirit.tscn::PackedScene::8072440624600198890::1689395775::0::1::::<><>::uid://bxc82bx7jnixl::::res://Sprites/sprite-sheets/forest-spirit-idle-and-attack-Sheet.png<>res://Scenes/Enemies/Forest Spirit/Forest-Spirit.gd<>res://Scenes/Hitboxes and Hurtboxes/Hitbox.tscn<>res://Scenes/Stats/Stats.tscn<>res://Scenes/Hitboxes and Hurtboxes/Hurtbox.tscn<>uid://cjyc3tittit8e::::res://Sprites/shadows/MediumShadow.png<>uid://8w0ds8e7qk8i::::res://Scenes/Hitboxes and Hurtboxes/PlayerDetectionZone/PlayerDetectionZone.tscn
 ::res://Scenes/Hitboxes and Hurtboxes/::1689343090
 Hitbox.gd::GDScript::-1::1689351257::0::1::::<>Area2D<>::
 Hitbox.tscn::PackedScene::-1::1689351257::0::1::::<><>::res://Scenes/Hitboxes and Hurtboxes/Hitbox.gd
 Hurtbox.tscn::PackedScene::-1::1689351257::0::1::::<><>::
-::res://Scenes/Hitboxes and Hurtboxes/PlayerDetectionZone/::1689389696
-PlayerDetectionZone.gd::GDScript::-1::1689387570::0::1::::<>Area2D<>::
-PlayerDetectionZone.tscn::PackedScene::2363172429469254354::1689389696::0::1::::<><>::res://Scenes/Hitboxes and Hurtboxes/PlayerDetectionZone/PlayerDetectionZone.gd
-::res://Scenes/LevelMaster/::1689389696
+::res://Scenes/Hitboxes and Hurtboxes/PlayerDetectionZone/::1689395985
+PlayerDetectionZone.gd::GDScript::-1::1689395770::0::1::::<>Area2D<>::
+PlayerDetectionZone.tscn::PackedScene::2363172429469254354::1689395985::0::1::::<><>::res://Scenes/Hitboxes and Hurtboxes/PlayerDetectionZone/PlayerDetectionZone.gd
+::res://Scenes/LevelMaster/::1689395775
 LevelMaster.gd::GDScript::-1::1689357986::0::1::::<>Node2D<>::
-LevelMaster.tscn::PackedScene::3133636771021198141::1689389696::0::1::::<><>::res://Scenes/LevelMaster/LevelMaster.gd
-::res://Scenes/Player/::1689389696
+LevelMaster.tscn::PackedScene::3133636771021198141::1689395775::0::1::::<><>::res://Scenes/LevelMaster/LevelMaster.gd
+::res://Scenes/Player/::1689395775
 Player.gd::GDScript::-1::1689358635::0::1::::<>CharacterBody2D<>::
 Player.png::CompressedTexture2D::5404741312143973190::1689343090::1689352789::1::::<><>::
-Player.tscn::PackedScene::76913656885116583::1689389696::0::1::::<><>::res://Scenes/Player/Player.gd<>uid://cjadkgsdln4n7::::res://Scenes/Player/Player.png
-::res://Scenes/Rooms/::1689389696
+Player.tscn::PackedScene::76913656885116583::1689395775::0::1::::<><>::res://Scenes/Player/Player.gd<>uid://cjadkgsdln4n7::::res://Scenes/Player/Player.png
+::res://Scenes/Rooms/::1689395775
 room.gd::GDScript::-1::1689351257::0::1::::<>Node2D<>::
-SampleRoom.tscn::PackedScene::3392986017222746181::1689389696::0::1::::<><>::res://Scenes/Rooms/room.gd<>uid://bh2ptw74qtwo::::res://Sprites/DirtTileset.png
+SampleRoom.tscn::PackedScene::3392986017222746181::1689395775::0::1::::<><>::res://Scenes/Rooms/room.gd<>uid://bh2ptw74qtwo::::res://Sprites/DirtTileset.png
 ::res://Scenes/Stats/::1689359643
 Stats.gd::GDScript::-1::1689359643::0::1::::<>Node<>::
 Stats.tscn::PackedScene::-1::1689351257::0::1::::<><>::res://Scenes/Stats/Stats.gd
@@ -36,8 +36,8 @@ HealthUI.tscn::PackedScene::-1::1689351257::0::1::::<><>::res://Scenes/UI/Health
 ::res://Scenes/UI/Minimap/::1689343090
 Minimap.gd::GDScript::-1::1689351257::0::1::::<>Control<>::
 Minimap.tscn::PackedScene::-1::1689351257::0::1::::<><>::res://Sprites/sprite-sheets/minimap-Sheet.png<>res://Scenes/UI/Minimap/Minimap.gd
-::res://Scenes/World/::1689389696
-Noel-Alpha.tscn::PackedScene::8327197094229385630::1689389696::0::1::::<><>::uid://bolt8pqo3mb0p::::res://Scenes/Rooms/SampleRoom.tscn<>uid://bdi0y0ak7nxf::::res://Scenes/Player/Player.tscn<>res://Scenes/UI/HealthUI/HealthUI.tscn<>res://Scenes/UI/Minimap/Minimap.tscn<>uid://dnal6g33vc4ig::::res://Scenes/Enemies/Forest Spirit/Forest-Spirit.tscn<>uid://bkv7sl84ari26::::res://Scenes/LevelMaster/LevelMaster.tscn
+::res://Scenes/World/::1689395775
+Noel-Alpha.tscn::PackedScene::8327197094229385630::1689395775::0::1::::<><>::uid://bolt8pqo3mb0p::::res://Scenes/Rooms/SampleRoom.tscn<>uid://bdi0y0ak7nxf::::res://Scenes/Player/Player.tscn<>res://Scenes/UI/HealthUI/HealthUI.tscn<>res://Scenes/UI/Minimap/Minimap.tscn<>uid://dnal6g33vc4ig::::res://Scenes/Enemies/Forest Spirit/Forest-Spirit.tscn<>uid://bkv7sl84ari26::::res://Scenes/LevelMaster/LevelMaster.tscn
 ::res://Scenes/World/Eduard Scenes/::1689343090
 Eduard Scene.tscn::PackedScene::-1::1689351257::0::1::::<><>::res://Scenes/Rooms/SampleRoom.tscn<>res://Player/Player.tscn<>res://Scenes/UI/HealthUI.tscn<>res://Scenes/UI/Minimap.tscn
 ::res://Scripts/::1689343090
